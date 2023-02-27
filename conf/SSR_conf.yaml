@@ -1,0 +1,24 @@
+corpus:
+  name: 'mngu0'
+  path: /home/beiming/Desktop/RAW_ATS_DATA/mngu0/mngu0  
+  EMA_path: 'mngu0_s1_ema_basic_1.1.0'
+  WAV_path: 'mngu0_s1_wav_16kHz_1.1.0'
+  TXT_path: 'mngu0_s1_lab_1.1.1'      
+  Filesets_path: 'mngu0_filesets'        
+  sel_channels: ['T3_py','T3_pz','T2_py','T2_pz','T1_py','T1_pz','jaw_py','jaw_pz','upperlip_py','upperlip_pz','lowerlip_py', 'lowerlip_pz']
+  
+deep_speech_setup:
+  n_cnn_layers: 2
+  n_rnn_layers: 2
+  rnn_dim: 512
+  stride: 2
+  dropout: 0.3
+  learning_rate: 0.0005 #1e-4
+  batch_size: 16
+  epochs: 80
+  early_stop: True
+  patient: 10
+
+testing_setup:
+  save_model: True
+  decoding: Greedy
